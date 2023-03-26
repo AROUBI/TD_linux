@@ -19,7 +19,7 @@ Debian-1 instance (PRIVATE IP: 172.26.5.242) (Public IP: 13.38.103.49)
 ssh-keygen
 cd ~/.ssh
 chmod 400 private_key
-ssh -i ~/.ssh/private_key admin@127.26.5.242
+ssh -i ~/.ssh/private_key admin@ip.127.26.5.242
 exit
 ```
 4. Create a script named connect.sh to automatically connect to the remote instance
@@ -27,7 +27,7 @@ exit
 mkdir lgp-instance
 cd lgp-instance
 vim connect.sh
-ssh -i ~/.ssh/private_key admin@127.26.5.242
+ssh -i ~/.ssh/private_key admin@ip.127.26.5.242
 ```
 5. Run the script to check it is working properly. Then exit to return to your local machine.
 ```
@@ -39,7 +39,7 @@ cd ~/.ssh
 mv private_key .private_key
 cd ~/lgp-instance
 vim connect.sh
-ssh -i ~/.ssh/.private_key admin@127.26.5.242
+ssh -i ~/.ssh/.private_key admin@ip.127.26.5.242
 source connect.sh
 ```
 
@@ -58,17 +58,17 @@ exit
 - Send your file test_to_remote_instance.txt to the home folder of your remote instance
 - Get the file test_from_remote_instance.txt to your current local directory
 ```
-scp test_to_remote_instance.txt admin@127.26.5.242:~
-scp admin@127.26.5.242:~/test_from_remote_instance.txt ~/lgp-instance
+scp test_to_remote_instance.txt admin@ip.127.26.5.242:~
+scp admin@ip.127.26.5.242:~/test_from_remote_instance.txt ~/lgp-instance
 ```
 4. Create two scripts :
 - scp_to_remote_instance.sh and scp_from_remote_instance.sh to respectively send and get data with your remote instance
 - Since you would like to send or receive any file (not just the test file), your scripts should use the path of the file to send / receive as an argument
 ```
 vim scp_to_remote_instance.sh
-scp $1 admin@127.26.5.242:~
+scp $1 admin@ip.127.26.5.242:~
 vim scp_from_remote_instance.sh
-scp admin@127.26.5.242:~/$1 ~/lgp-instance
+scp admin@ip.127.26.5.242:~/$1 ~/lgp-instance
 ```
 5. Test your scripts with varying files
 ```
