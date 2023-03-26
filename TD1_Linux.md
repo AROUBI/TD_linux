@@ -22,7 +22,7 @@ cd home
 ```
 6. Go to your home directory
 ```
-cd plejamtel
+cd aroubi
 ```
 7. Go back to the general home directory (located "just above")
 ```
@@ -69,7 +69,7 @@ cd linux_ex_1
 ```
 5. Create an empty text file named [first_name]_[last_name].txt (e.g. alexis_bogroff.txt)
 ```
-touch paul_lejamtel.txt
+touch a_roubi.txt
 ```
 6. Create a folder notes
 ```
@@ -77,11 +77,11 @@ mkdir notes
 ```
 7. Move your text file into this folder
 ```
-mv paul_lejamtel.txt notes
+mv a_roubi.txt notes
 ```
 8. Rename the text file by appending the current year [first_name]_[last_name]_[current_year].txt
 ```
-mv paul_lejamtel.txt paul_lejamtel_2023.txt
+mv a_roubi.txt a_roubi_2023.txt
 ```
 9. Make a copy of this folder, name it notes_2023
 ```
@@ -124,7 +124,7 @@ sh script_1.sh
 1. Create a file credentials in the folder linux_ex_1
 (a) Write any kind of (fake) personal information within the file
 ```
-echo "Secret Password: password" > credentials
+echo "AROUBI" > credentials
 ```
 (b) Display the file content
 ```
@@ -142,7 +142,7 @@ ls -l credentials
 ```
 (b) Modify and save the file (can't modify with new permissions)
 ```
-echo "Some more informations..." >> credentials
+echo "me and my friends" >> credentials
 ```
 (c) Display the file content (didn't change)
 ```
@@ -156,7 +156,7 @@ ls -l credentials
 ```
 (b) Modify and save the file (it modified this time)
 ```
-echo "Some more informations..." >> credentials
+echo "me and my friends" >> credentials
 ```
 (c) Display the file content
 ```
@@ -191,7 +191,7 @@ cd /
 (a) Write some information in the file
 ```
 sudo su
-echo "Some informations..." > .private_file
+echo "Hello World with two l" > .private_file
 ```
 (b) Display the file content
 ```
@@ -205,7 +205,7 @@ ls -a
 (a) Write some new information in the file
 ```
 sudoedit .private_file
-"More informations..."
+"and word with one w"
 ```
 (b) Display the file content
 ```
@@ -229,7 +229,7 @@ sudo chmod 666 .private_file
 ```
 2. Set the new file owner as the current user
 ```
-sudo chown plejamtel .private_file
+sudo chown aroubi .private_file
 ```
 3. Change permissions of .private_file to read and write for all users, in
 normal user mode
