@@ -10,9 +10,6 @@ Check the data on https://opendomesday.org/api/, for instance
 - *https://opendomesday.org/api/1.0/place/2346/*
 - *https://opendomesday.org/api/1.0/manor/181/*
 
-Can you find other interesting URLs ?
-
-**Yes, there is https://opendomesday.org/api/1.0/county/[id_county] to get informations about a specific county.**
 
 ### Exercise 1.2: curl and grep
 Let’s try to get the ids for all the places in Derbyshire !
@@ -21,8 +18,8 @@ curl https://opendomesday.org/api/1.0/county/ | grep -o "{[^}]*\"name\":\"Derbys
 ```
 We can see with this command that the *id* of Derbyshire is **dby**. So we can use the other link so it is easier to acces information.
 ```
-mkdir linux_API
-cd linux_API
+mkdir linux_curl_grep
+cd linux_curl_grep
 curl https://opendomesday.org/api/1.0/county/dby/ | grep -o '[^{}]*"id":[^,}]*' | grep -o '[^:]*$' | tail -n +2 > "ids.txt"
 cat ids.txt
 ```
